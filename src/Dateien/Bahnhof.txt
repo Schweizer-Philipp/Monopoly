@@ -1,0 +1,4 @@
+5@Südbahnhof
+15@Westbahnhof
+25@Nordbahnhof
+35@Hauptbahnhof

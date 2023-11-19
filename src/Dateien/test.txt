@@ -1,0 +1,4 @@
+5@480@880@80@160@Suedbahnhof@200@BildPath@1@null 
+15@0@480@160@80@Westbahnhof@200@BildPath@1@null
+25@480@0@80@160@Nordbahnhof@200@BildPath@1@null
+35@880@480@160@80@Hauptbahnhof@200@BildPath@1@null

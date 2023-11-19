@@ -1,0 +1,15 @@
+1@Lebensversicherung@Ihre Lebensversicherung wird f�llig. Sie erhalten M 100@100
+2@Gef�ngnisrei Karte@Sie kommen aus dem Gef�ngnis frei. Behalten Sie diese Karte, bis Sie sie ben�tigen@karte
+3@Irrtum@Bank-Irrtum zu Ihren Gunsten Sie bekommen 200�@200
+4@Urlaubsgeld@Urlaubsgeld! Sie erhalten M 100.@100
+5@Arzt-Kosten@Arzt-Kosten. Zahlen Sie M 50.@-50
+6@Los-Gl�ck@R�cken Sie vor bis auf Los. (Ziehe M 200 ein).@Los
+7@Einkommensteuer@Einkommenssteuerr�ckerstattung. Sie erhalten M 20.@20
+8@Preis@Zweiter Preis im Sch�nheitswettbewerb. Sie erhalten M 10.@10
+9@Gef�ngnis@Gehen Sie in das Gef�ngnis. Begeben Sie sich direkt dorthin. Gehen Sie nicht �ber Los. Ziehen Sie nicht M 200 ein.@gef�ngnis
+10@Verk�ufe@Aus Lagerverk�ufen erhalten Sie M 50@50
+11@Geburtstag@Sie haben Geburtstag.Sie bekommen M 10.@10
+12@Schulgeld@Schulgeld. Zahlen Sie M 50.@-50
+13@Krankenhaus@Krankenhausgeb�hren. Zahlen Sie M 100.@-100
+14@Erbe@Sie erben M 100.@100
+15@Miete@Sie werden zu Stra�enausbesserungsarbeiten herangezogen. Zahlen Sie M 40 je Haus und M 115 je Hotel an die Bank.@zahlen

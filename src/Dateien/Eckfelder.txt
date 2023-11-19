@@ -1,0 +1,4 @@
+0@Los.png@Ueber Los!
+10@Gefaengnis.png@Gefängnis
+20@Parken.png@Frei Parken
+30@GeheInsGef.png@Gehe in das Gefaengis

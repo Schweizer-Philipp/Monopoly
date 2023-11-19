@@ -1,0 +1,41 @@
+0@von Los!@zu Los!
+1@von der Badstraße@zur Badstraße
+2@von einem Gemeinschaftsfeld@zu einem Gemeinschaftsfeld
+3@von der Turmstraße@zu der Turmstraße
+4@vom Einkommensteuerfeld@zum Einkommensteuerfeld
+5@vom Südbahnhof@zum Südbahnhof 
+6@von der Chausseestraße@zu der Chausseestraße
+7@von einem Ereignisfeld@zu einem Ereignisfeld
+8@von der Elisenstraße@zu der Elisenstraße
+9@von der Poststraße@zu der Poststraße
+10@von Gefängnis Nur zu Besuch Feld@zu Im Gefängnis Nur zu Besuch
+11@von der Seestraße@zu der Seestraße
+12@vom Elektrizitätswerk@zum Elektrizitätswerk 
+13@von der Hafenstraße@zu der Hafenstraße
+14@von der Neuestraße@zu der Neuestraße
+15@vom Westbahnhof@zum Westbahnhof
+16@von der Münchnerstraße@zu der Münchnerstraße
+17@von einem Gemeinschaftsfeld@zu einem Gemeinschaftsfeld
+18@von der Wienerstraße@zu der Wienerstraße
+19@von der Berlinerstraße@zu der Berlinerstraße 
+20@von FreiParken!@zu FreiParken
+21@von der Theaterstraße@zu der Theaterstraße
+22@von einem Ereignisfeld@zu einem Ereignisfeld
+23@von der Museumstraße@zu der Museumstraße
+24@von der Opernplatz@zu der Opernplatz
+25@vom Nordbahnhof@zum Nordbahnhof
+26@von der Lessingstraße@zu der Lessingstraße
+27@von der Schillerstraße@ zu der Schillerstraße
+28@vom Wasserwerk@zum Wasserwerk
+29@von der Goethestraße@zu der Goethestraße
+30@von Gehen Sie in das Gefängnis@ zu Gehen Sie in das Gefängnis
+31@von dem Rathausplatz@zu dem Rathausplatz
+32@von der Hauptstraße@zu der Hauptstraße
+33@von einem Gemeinschaftsfeld@zu einem Gemeinschaftsfeld
+34@von der Bahnhofstraße@zu der Bahnhofstraße
+35@vom Hauptbahnhof@zum Hauptbahnhof
+36@von einem Ereignisfeld@zu einem Ereignisfeld
+37@von der Parkstraße@zu der Parkstraße
+38@vom Zusatzsteuerfeld@zum Zusatzsteuerfeld
+39@von der Schlossallee@zu der Schlossallee
+ 

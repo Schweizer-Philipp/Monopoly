@@ -1,0 +1,227 @@
+//					if( keyCode > 36 && keyCode < 41 )
+//					{
+//						einstellungsPanel.getJtfWürfel().setColumns(20);
+//						einstellungsPanel.revalidate();
+//						
+//						
+//					}
+//					else if ((keyCode >47 && keyCode<58)||(keyCode >64 && keyCode<91))
+//					{	
+//						
+//						einstellungsPanel.getJtfWürfel().setColumns(4);
+//						einstellungsPanel.revalidate();
+//					}
+// WUNDERSCHÖN! (c) Robert
+
+
+
+
+
+		Toolkit toolkit = getToolkit();
+
+		
+		screenBreite = toolkit.getScreenSize().width;
+	 	screenHöhe = toolkit.getScreenSize().height;
+		
+	 	// insets = höhe/breite
+	 	// faktor = breite -> quadrat
+	 	double gridBreite = screenBreite*KONSTANTE;
+	 	double felderb = gridBreite/13;
+	 	
+	 	
+	 	
+	 	private void setUpButton(JButton btn)
+	{
+		toggleBtnstatus = 1;
+		btn.setOpaque(false);
+		btn.setContentAreaFilled(false);
+		btn.setBorderPainted(false);
+		try 
+		{
+			btn.setIcon(new ImageIcon(ImageIO.read(getClass().getResource("/res/ToggleButtonOn.png"))));
+		} 
+		catch (IOException e) 
+		{
+			e.printStackTrace();
+		}
+		
+		btn.addActionListener(new ActionListener() 
+		{
+			
+			@Override
+			public void actionPerformed(ActionEvent e) 
+			{
+				AudioStream audioStream = null;
+				try 
+				{
+					audioStream = new AudioStream(getClass().getResourceAsStream("/res/toggleButtonSound.wav"));
+				} catch (IOException e1)
+				{
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				}
+				AudioPlayer.player.start(audioStream);
+				try 
+				{
+					if(toggleBtnstatus==1)
+					{
+						btn.setIcon(new ImageIcon(ImageIO.read(getClass().getResource("/res/ToggleButtonOff.png"))));
+						toggleBtnstatus = 0;
+					}
+					else if(toggleBtnstatus==0)
+					{
+						btn.setIcon(new ImageIcon(ImageIO.read(getClass().getResource("/res/ToggleButtonOn.png"))));
+						toggleBtnstatus = 1;
+					}
+				} 
+				catch (IOException ex) 
+				{
+					ex.printStackTrace();
+				}
+				
+			}
+		});
+	}
+	unten.add(new Street(0,new Rectangle(gamePanel.getMaxXandY().y-(mitzählerx*2),gamePanel.getMaxXandY().y-(mitzählerx*2), mitzählerx*2, mitzählerx*2),"Los!",null,Straßentyp.LOS,"Ziehe 400€ ein"));
+		links.add(new Street(10,new Rectangle(0, gamePanel.getMaxXandY().y-(mitzählerx*2), mitzählerx*2, mitzählerx*2),"Gefängnis",null,Straßentyp.LOS,"Ziehe 400€ ein"));
+		oben.add(new Street(20,new Rectangle(0,0, mitzählerx*2, mitzählerx*2),"Frei Parken",null,Straßentyp.LOS,"Ziehe 400€ ein"));
+		rechts.add(new Street(30,new Rectangle(gamePanel.getMaxXandY().y-(mitzählerx*2), 0, mitzählerx*2, mitzählerx*2),"Gehe ins Gefängnis!",null,Straßentyp.LOS,"Ziehe 400€ ein"));
+		
+		
+			/*
+			 * Primitiven Datentypen
+			 * byte  8bit   -2^7 - (2^7) - 1
+			 * char  16bit  0 .. (2^16)-1
+			 * short 16bit  -2^15 - (2^15) - 1
+			 * int   32bit  -2^31 - (2^31) - 1
+			 * long  64bit  -2^63 - (2^63)-1
+			 */
+			 public void changePositionofplayer(int spielerID,int newID) 
+	{
+		if(spielerArray[spielerID-1].getId()!=newID)
+		{
+			int oldID = 0;
+			
+			for(Spieler s:spielerArray)
+			{
+				
+				if(s.getSpielerID()==spielerID)
+				{
+					oldID = s.getId();
+				}
+			
+			}
+			
+			int anzahlSpielerAufDemFeld = 0;
+			ArrayList<Integer> spielerDieAufDemNeuenFeldStehen = new ArrayList<Integer>();
+			ArrayList<Integer> spielerDieAufDemAltenFeldStehen =new ArrayList<Integer>();
+			for(Spieler s:spielerArray)
+			{
+				
+				if(s.getId()==newID&&s.getSpielerID()!=spielerID)
+				{
+					
+					spielerDieAufDemNeuenFeldStehen.add(s.getSpielerID());
+					anzahlSpielerAufDemFeld++;
+				}
+			}
+			
+			for(Spieler s:spielerArray)
+			{
+				
+				if(s.getId()==oldID&&s.getSpielerID()!=spielerID)
+				{
+					
+					spielerDieAufDemAltenFeldStehen.add(s.getSpielerID());
+					
+				}
+			}
+			
+			
+			if((newID<10 && newID >=0)||(newID<30 && newID >=20))
+			{
+				int anzahlSpieler = anzahlSpielerAufDemFeld+1;
+				int platzFürEinBild = (streetManager.getSpielfeld().get(newID).getInfoRechteck().height/anzahlSpieler-30)/2;
+				int x = streetManager.getSpielfeld().get(newID).getInfoRechteck().x + (streetManager.getSpielfeld().get(newID).getInfoRechteck().width-50)/2;
+				int y = streetManager.getSpielfeld().get(newID).getInfoRechteck().y + (platzFürEinBild*anzahlSpieler+(30*anzahlSpielerAufDemFeld));
+				
+				
+				int mitläufer=0;
+				for(int i : spielerDieAufDemNeuenFeldStehen)
+				{
+					anzahlSpieler = mitläufer+1;
+					spielerArray[i-1].setPoint(x,streetManager.getSpielfeld().get(newID).getInfoRechteck().y + (platzFürEinBild*anzahlSpieler+(30*mitläufer)));
+					mitläufer++;
+					
+					
+				}
+				
+				spielerArray[spielerID-1].setId(newID);
+				spielerArray[spielerID-1].setPoint(x,y);
+				
+				
+			}
+			
+			else if((newID<20 && newID >=10)||(newID<39 && newID >=30))
+			{
+				int anzahlSpieler = anzahlSpielerAufDemFeld+1;
+				int platzFürEinBild = (streetManager.getSpielfeld().get(newID).getInfoRechteck().width/anzahlSpieler-30)/2;
+				
+				int y = streetManager.getSpielfeld().get(newID).getInfoRechteck().y + (streetManager.getSpielfeld().get(newID).getInfoRechteck().height-20)/2;
+				int x = streetManager.getSpielfeld().get(newID).getInfoRechteck().x + (platzFürEinBild*anzahlSpieler+(30*anzahlSpielerAufDemFeld));;
+				
+				int mitläufer=0;
+				for(int i : spielerDieAufDemNeuenFeldStehen)
+				{
+					
+					anzahlSpieler = mitläufer+1;
+					spielerArray[i-1].setPoint(streetManager.getSpielfeld().get(newID).getInfoRechteck().x + (platzFürEinBild*anzahlSpieler+(30*mitläufer)),y);
+					mitläufer++;
+					
+				}
+				
+				spielerArray[spielerID-1].setId(newID);
+				spielerArray[spielerID-1].setPoint(x,y);
+				
+			}
+			changePositionofPlayerOnTheOldFeld(spielerDieAufDemAltenFeldStehen,oldID);
+			
+		}
+		
+		
+		
+	}
+	public void changePositionofPlayerOnTheOldFeld(ArrayList<Integer> spielerAufDemAltenFeld,int oldID) 
+	{
+		if(spielerAufDemAltenFeld!=null)
+		{
+			if((oldID<10 && oldID >=0)||(oldID<30 && oldID >=20))
+			{
+				int x = streetManager.getSpielfeld().get(oldID).getInfoRechteck().x + (streetManager.getSpielfeld().get(oldID).getInfoRechteck().width-50)/2;
+				for(int i = 0 ; i<spielerAufDemAltenFeld.size();i++)
+				{
+					int anzahlSpieler2 = spielerAufDemAltenFeld.size();
+					int platzFürEinBild = (streetManager.getSpielfeld().get(oldID).getInfoRechteck().width/anzahlSpieler2-30)/2;
+					int anzahlSpieler1 = i+1;
+					spielerArray[spielerAufDemAltenFeld.get(i)-1].setPoint(x,streetManager.getSpielfeld().get(oldID).getInfoRechteck().y + (platzFürEinBild*anzahlSpieler1+(30*i)));
+					
+				}
+			}
+			else if((oldID<20 && oldID >=10)||(oldID<39 && oldID >=30))
+			{
+				
+				int y = streetManager.getSpielfeld().get(oldID).getInfoRechteck().y + (streetManager.getSpielfeld().get(oldID).getInfoRechteck().height-20)/2;
+				for(int i = 0 ; i<spielerAufDemAltenFeld.size();i++)
+				{
+					int anzahlSpieler2 = spielerAufDemAltenFeld.size();
+					int platzFürEinBild = (streetManager.getSpielfeld().get(oldID).getInfoRechteck().width/anzahlSpieler2-30)/2;
+					int anzahlSpieler1 = i+1;
+					spielerArray[spielerAufDemAltenFeld.get(i)-1].setPoint(streetManager.getSpielfeld().get(oldID).getInfoRechteck().x + (platzFürEinBild*anzahlSpieler1+(30*i)),y);
+					
+				}
+			}
+			
+		}
+		
+	}
+		

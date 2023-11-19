@@ -1,0 +1,12 @@
+1@Dividende@Die Bank zahlt Ihnen eine Dividende von M 50.@50
+2@Seestra�e@R�cken Sie vor bis zur Seestra�e. Wenn Sie �ber Los kommen, ziehen Sie M 200 ein.@see
+3@Renovieren@Sie lassen Ihre H�user renovieren. Zahlen Sie: M 25 pro Haus, M 100 pro Hotel.@zahlen
+4@Vorstand@Sie sind zum Vorstand gew�hlt worden. Zahlen Sie M 50.@-50
+5@Bausparvertrag@Ihr Bausparvertrag wird f�llig. Sie erhalten M 200.@200
+6@Freikarte@Sie kommen aus dem Gef�ngnis frei!@karte
+7@Gef�hngnis@Gehen Sie in das Gef�ngnis.@gef�ngnis
+8@Los-Gl�ck@R�cken Sie vor bis auf Los.@Los
+9@Opernplatz@R�cken Sie vor bis zum Opernplatz.@opern
+10@Schlossallee@R�cken Sie vor bis zur Schlossallee.@allee
+11@Bahnhof@Machen Sie einen Ausflug zum S�dbahnhof.@bahnhof
+12@Strafzettel@Strafzettel! Zahlen Sie M 15.@-15
